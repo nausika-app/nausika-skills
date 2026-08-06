@@ -21,11 +21,5 @@
   "skills": [
     "./skills/nausika-setup",
     "./skills/nausika-passage-planning"
-  ],
-  "mcpServers": {
-    "nausika": {
-      "type": "http",
-      "url": "https://mcp.nausika.app"
-    }
-  }
+  ]
 }

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "nausika": {
+      "type": "http",
+      "url": "https://mcp.nausika.app"
+    }
+  }
+}
