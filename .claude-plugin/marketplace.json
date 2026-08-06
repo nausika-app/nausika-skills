@@ -1,0 +1,23 @@
+{
+  "name": "nausika",
+  "owner": {
+    "name": "Nausika",
+    "url": "https://nausika.app"
+  },
+  "description": "Marine navigation for AI agents — the Nausika MCP connector plus the skills that drive it.",
+  "plugins": [
+    {
+      "name": "nausika",
+      "source": "./",
+      "description": "Sea-aware routing, marine forecasts, tides and curated Mediterranean places, with the procedural knowledge to use them safely.",
+      "category": "data",
+      "keywords": [
+        "marine",
+        "sailing",
+        "navigation",
+        "weather",
+        "mediterranean"
+      ]
+    }
+  ]
+}

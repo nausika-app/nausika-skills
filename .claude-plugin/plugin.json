@@ -1,0 +1,31 @@
+{
+  "name": "nausika",
+  "version": "0.1.0",
+  "description": "Real Mediterranean marine data for your agent — sea-aware routing, wind and wave forecasts, tides, marinas and anchorages. Bundles the Nausika MCP connector with the skills that teach an agent to drive it.",
+  "author": {
+    "name": "Nausika",
+    "url": "https://nausika.app"
+  },
+  "homepage": "https://nausika.app",
+  "repository": "https://github.com/nausika-app/nausika-skills",
+  "license": "MIT",
+  "keywords": [
+    "marine",
+    "sailing",
+    "navigation",
+    "weather",
+    "tides",
+    "mediterranean",
+    "mcp"
+  ],
+  "skills": [
+    "./skills/nausika-setup",
+    "./skills/nausika-passage-planning"
+  ],
+  "mcpServers": {
+    "nausika": {
+      "type": "http",
+      "url": "https://mcp.nausika.app"
+    }
+  }
+}
