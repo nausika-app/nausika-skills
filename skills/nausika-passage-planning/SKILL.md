@@ -1,6 +1,8 @@
 ---
 name: nausika-passage-planning
 description: Plan a passage, crossing or day sail with real marine data — sea-aware routing, wind and wave forecasts, tides, marinas and anchorages. Use for any question about sailing somewhere, a weather window, an ETA, distance by sea, where to moor or shelter, or conditions along a coast. Requires the Nausika MCP tools (nausika_*).
+license: MIT
+compatibility: Requires the Nausika MCP server connected to the agent — install the nausika-setup skill first, or the Nausika plugin, which ships the connector. Sea routing and curated places cover the Mediterranean basin; forecasts, tides and geocoding are worldwide.
 ---
 
 Plan passages with Nausika's tools. Never answer a maritime question from memory when a tool can answer it.

@@ -1,6 +1,8 @@
 ---
 name: nausika-setup
 description: Connect Nausika, the marine data MCP server at mcp.nausika.app, to this agent and verify it responds. Use when the nausika_* tools are missing or failing, or when the user asks to set up, install, connect or authenticate Nausika.
+license: MIT
+compatibility: Requires an MCP-capable agent and network access. Connects to the Nausika MCP server at https://mcp.nausika.app over Streamable HTTP, authenticating with OAuth 2.1 via GitHub, Google or Microsoft. No API key.
 ---
 
 Connect this agent to Nausika's MCP server, then prove it works.
