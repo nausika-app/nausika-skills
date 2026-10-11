@@ -37,6 +37,6 @@ Ask for one concrete thing and report the result: `nausika_geocode` for Portofin
 
 ## Scope
 
-Curated places, ratings and sea routing cover the **Mediterranean**. Forecasts, tides, geocoding and coastline checks work worldwide. `nausika_sea_route` errors outside the Mediterranean by design.
+Curated places, ratings and detailed coastal routing cover four sea areas: the **Mediterranean**, the most complete, and the newly opened **European Atlantic with the Canaries**, **Caribbean** and **South-East Asia**, where the curated data is still growing. Forecasts, tides, geocoding and coastline checks work worldwide. Outside the four areas `nausika_sea_route` follows the main ocean lanes and errors when an endpoint is far from any lane.
 
 To actually plan with the tools, use the `nausika-passage-planning` skill.

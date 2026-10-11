@@ -2,7 +2,7 @@
 name: nausika-passage-planning
 description: Plan a passage, crossing or day sail with real marine data — sea-aware routing, wind and wave forecasts, tides, marinas and anchorages. Use for any question about sailing somewhere, a weather window, an ETA, distance by sea, where to moor or shelter, or conditions along a coast. Requires the Nausika MCP tools (nausika_*).
 license: MIT
-compatibility: Requires the Nausika MCP server connected to the agent — install the nausika-setup skill first, or the Nausika plugin, which ships the connector. Sea routing and curated places cover the Mediterranean basin; forecasts, tides and geocoding are worldwide.
+compatibility: Requires the Nausika MCP server connected to the agent — install the nausika-setup skill first, or the Nausika plugin, which ships the connector. Detailed sea routing and curated places cover the Mediterranean, the European Atlantic with the Canaries, the Caribbean and South-East Asia; forecasts, tides and geocoding are worldwide.
 ---
 
 Plan passages with Nausika's tools. Never answer a maritime question from memory when a tool can answer it.
@@ -18,7 +18,7 @@ Distance in **nautical miles**, speed in **knots**, depth and height in **meters
 1. **`nausika_geocode`** — every place name, first. Never write coordinates from memory. Check `source` on each result: `local` is the curated marine database, `osm` is the global fallback and may not be a marine feature at all.
 2. **`nausika_get_boat_profile`** — if the user has a boat saved, use its cruising speed and consumption instead of the defaults. Skip silently when there is none.
 3. **`nausika_marine_forecast`** — at origin, at destination, and at any waypoint where the route turns a cape. `preset` sets the horizon: `now`, `today`, `tactical` (3 days, default), `planning` (8 days), `extended` (14 days). Past roughly 3 days, present a trend, not a forecast. When the call is marginal, set `include_percentiles: true` and quote the p10–p90 spread instead of a single number.
-4. **`nausika_sea_route`** — the only acceptable way to get a distance by sea. It runs Dijkstra over the MARNET sea-lane graph, so it goes around land; a straight line between two ports does not. Mediterranean only — it errors elsewhere, and that is a boundary, not a bug to work around. It snaps land coordinates to the nearest port or anchorage. Pass the boat's real speed; the default is 6 kn.
+4. **`nausika_sea_route`** — the only acceptable way to get a distance by sea. It runs Dijkstra over the MARNET sea-lane graph, so it goes around land; a straight line between two ports does not. Inside the covered areas (Mediterranean, European Atlantic and Canaries, Caribbean, South-East Asia) it follows the coast in detail; outside them it uses the main ocean lanes, and it errors when an endpoint is far from any lane — that is a boundary, not a bug to work around. It snaps land coordinates to the nearest port or anchorage. Pass the boat's real speed; the default is 6 kn.
 5. **`nausika_search_places`** — marinas, anchorages and shelter near the destination and along the route. Every result carries an 8-char `[xxxxxxxx]` short-id; pass it to **`nausika_get_place`** for depth, holding, exposure, ratings and OSM detail.
 6. **`nausika_calculator`** — fuel, range, conversions. It accepts only `+ - * / ^ %`, parentheses, `sqrt abs ceil floor round sin cos tan log exp min max`, `PI` and `E`. Anything else is rejected — decompose the expression instead.
 
